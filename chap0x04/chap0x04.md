@@ -15,7 +15,7 @@
     * ☑️支持对图片批量添加自定义文本水印
 
     * ☑️支持批量重命名（统一添加文件名前缀或后缀，不影响原始文件扩展名）
-  
+    
     * ☑️支持将png/svg图片统一转换为jpg格式
 
 ### 二、用bash编写一个文本批处理脚本，对以下附件分别进行批量处理完成相应的数据统计任务：
@@ -46,5 +46,108 @@
 
 # 实验内容
 
-### 一、
-![01](./image/TOP100.png)
+#### 一、实验一
+
+- 安装`imagemagick`和`shellcheck`，并用`scp`上传满足格式的图片文件
+
+```
+sudo apt update && apt-get install shellcheck
+sudo apt-get install imagemagick
+scp C:/Users/ying/Desktop/{目标文件} ying@192.168.56.101:~/image
+```
+
+- 在对应目录下编写bash脚本，脚本内容放在`/ScriptCode/test1-1.sh`中
+
+- 运行bash脚本后的结果如下所示
+
+  - ​	帮助手册和对JPEG格式图片进行质量压缩，以及对jpeg/png/svg图片压缩分辨率 
+
+    ![image-compression](./image/image-compression.png)
+
+  - 对图片添加自定义文本水印
+
+    ![add watermark](./image/add-watermark.png)
+
+  - 对图片文件添加前缀或后缀
+
+    ![add prefix or suffix](./image/add prefix or suffix.png)
+
+  - 将png/svg图片统一转换成jpg图片
+
+    ![image conversion](./image/image-conversion.png)
+
+------
+
+#### 二、实验二
+
+- 先下载tsv文件
+
+```
+wget "https://c4pr1c3.gitee.io/linuxsysadmin/exp/chap0x04/worldcupplayerinfo.tsv"
+```
+
+- 在对应目录下编写bash脚本，脚本内容放在`/ScriptCode/test1-2.sh`中
+
+- bash脚本运行结果如下所示
+
+  - ​	帮助手册和各参数结果
+
+    ![data statistics task](./image/data statistics task.png)
+
+------
+
+#### 三、实验三
+
+- 下载文件到本地并解压缩
+
+```
+wget "https://c4pr1c3.github.io/LinuxSysAdmin/exp/chap0x04/web_log.tsv.7z"
+```
+
+```
+7z x web_log.tsv.7z
+```
+
+- 在对应目录下编写bash脚本，脚本内容放在`/ScriptCode/test1-3.sh`中
+
+- 脚本运行后的结果如下所示
+
+  - ​	帮助手册和来源主机TOP100和分别对应出现的次数
+
+    ![TOP100](./image/TOP100.png)
+
+  - 来源主机TOP 100 IP和分别对应出现的次数
+
+    ![TOP 100 IP](./image/TOP100_IP.png)
+
+  - 最频繁被访问的URL TOP 100
+
+    ![URL TOP 100](./image/URL_TOP_100.png)
+
+  - 不同响应状态码的出现次数和对应百分比和不同4XX状态码对应的TOP 10 URL和对应出现的总次数
+
+    ![status code](./image/status_code.png)
+
+  - 给定URL输出TOP 100访问来源主机
+
+    ![TOP100 of URL](./image/TOP100 of URL.png)
+
+## 实验遇到的问题
+
+------
+
+- 在进行第一个实验，最开始没有把bash脚本放到对应目录下，因此运行时一直在报错，后来经过检查，发现bash脚本应该放到图片对所在目录下，这里用命令`cp`完成了文件的复制转移
+
+- 不知道怎么配置Travis CI。代码编写不是问题，重要的是Travis的配置和运行。
+
+  
+
+------
+
+[scp命令](https://www.coonote.com/linux/linux-cmd-scp.html)
+
+[把文件复制到对应目录下](https://blog.csdn.net/zouyang920/article/details/122685931)
+
+[持续集成服务 Travis CI 教程 - 阮一峰的网络日志 ](https://www.ruanyifeng.com/blog/2017/12/travis_ci_tutorial.html)
+
+[markdown官方教程](https://markdown.com.cn/tools.html)
