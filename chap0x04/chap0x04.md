@@ -132,15 +132,20 @@ wget "https://c4pr1c3.github.io/LinuxSysAdmin/exp/chap0x04/web_log.tsv.7z"
 
     ![TOP100 of URL](./image/TOP100 of URL.png)
 
+#### 构建Travis
+
+Travis链接：[Travis CI]([CUCCS/2022-linux-public-yingxue-cloud - Travis CI (travis-ci.com)](https://app.travis-ci.com/github/CUCCS/2022-linux-public-yingxue-cloud/branches))
+
+------
+
 ## 实验遇到的问题
 
 ------
 
 - 在进行第一个实验，最开始没有把bash脚本放到对应目录下，因此运行时一直在报错，后来经过检查，发现bash脚本应该放到图片对所在目录下，这里用命令`cp`完成了文件的复制转移
 
-- 不知道怎么配置Travis CI。代码编写不是问题，重要的是Travis的配置和运行。
+- 不知道怎么配置Travis CI。代码编写不是问题，重要的是Travis的配置和运行。需要注意的是Travis要求开源项目的根目录下必须要有`.travis.yml`文件。这是Travis的配置文件，必须保存在GitHub仓库中。Travis会执行GitHub中保存的脚本里的命令。
 
-  
 
 ------
 
@@ -151,3 +156,4 @@ wget "https://c4pr1c3.github.io/LinuxSysAdmin/exp/chap0x04/web_log.tsv.7z"
 [持续集成服务 Travis CI 教程 - 阮一峰的网络日志 ](https://www.ruanyifeng.com/blog/2017/12/travis_ci_tutorial.html)
 
 [markdown官方教程](https://markdown.com.cn/tools.html)
+
