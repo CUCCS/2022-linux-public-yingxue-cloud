@@ -70,7 +70,7 @@ scp C:/Users/ying/Desktop/{目标文件} ying@192.168.56.101:~/image
 
   - 对图片文件添加前缀或后缀
 
-    ![add prefix or suffix](./image/add prefix or suffix.png)
+    ![add prefix or suffix](./image/add-prefix-or-suffix.png)
 
   - 将png/svg图片统一转换成jpg图片
 
@@ -92,7 +92,7 @@ wget "https://c4pr1c3.gitee.io/linuxsysadmin/exp/chap0x04/worldcupplayerinfo.tsv
 
   - ​	帮助手册和各参数结果
 
-    ![data statistics task](./image/data statistics task.png)
+    ![data statistics task](./image/data-statistics-task.png)
 
 ------
 
@@ -130,7 +130,7 @@ wget "https://c4pr1c3.github.io/LinuxSysAdmin/exp/chap0x04/web_log.tsv.7z"
 
   - 给定URL输出TOP 100访问来源主机
 
-    ![TOP100 of URL](./image/TOP100 of URL.png)
+    ![TOP100 of URL](./image/TOP100-URL.png)
 
 
 #### 构建Travis
