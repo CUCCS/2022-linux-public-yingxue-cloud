@@ -323,7 +323,7 @@ sudo usermod -a -G <groupname> <username>
 
 + 在windows的目录下建立共享文件夹，然后，在virtualbox的共享文件夹里面设置好:
 
-![assign-share](./assign-share.png)
+![assign-share](./image/assign-share.png)
 
 + 然后在虚拟机的/mnt路径下新建一个share文件夹并挂载
 
@@ -334,7 +334,7 @@ $ sudo mount -t vboxsf share /mnt/share/
 
 + 最后修改fstab文件，在文件末添加：`sharefile /mnt/share/ vboxsf defaults 0 0`
 
-![change-fstab](./change-fstab.png)
+![change-fstab](./image/change-fstab.png)
 
 ### 5.基于LVM（逻辑分卷管理）的分区如何实现动态扩容和缩减容量？
 
